@@ -46,13 +46,12 @@ body {
   border-radius: 5px;
   text-align: center;
   transition: background-color 0.3s ease; /* Animación suave para el cambio de color */
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
 }
 
-/* Cambiar el color cuando el mouse pasa sobre el div */
-.option:hover {
-  background-color: #3481c9; /* Color de fondo al pasar el mouse */
-  color: white; /* Cambiar el color del texto también si lo deseas */
-}
 
 
 /* Pie de Página */
@@ -96,4 +95,33 @@ body {
   cursor: pointer;
   background-color: transparent;
   border: none;
+}
+
+.option:hover {
+  background-color: #3481c9;
+  color: white;
+}
+
+
+/* Tooltip text */
+.option .tooltiptext {
+  visibility: hidden;
+  width: 150px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -70px;
+  background-color: white;
+  color: #000000;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.option:hover .tooltiptext {
+  visibility: visible;
 }
